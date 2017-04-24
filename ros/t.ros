@@ -1,0 +1,16 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+
+(ql:quickload '(:qlot :prove))
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+    (multiple-value-bind
+      (flag passed-test-files failed-test-files)
+      (qlot:with-local-quicklisp :cl-aws-template (prove:run :cl-aws-template-test))
+      (format t "result : ~a~%" flag)
+      (format t "passed test files : ~a~%" passed-test-files)
+      (format t "failed test files : ~a~%" failed-test-files)))
