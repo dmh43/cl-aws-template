@@ -1,4 +1,3 @@
-(push #p"/home/dany/projects/cl-aws-template/" asdf:*central-registry*)
 (ql:quickload :cl-aws-template)
 
 (defpackage cl-aws-template.app
