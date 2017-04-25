@@ -1,0 +1,2 @@
+* cl-aws-template
+A basic template project for deploying Common Lisp applications to ElasticBeanstalk on AWS
