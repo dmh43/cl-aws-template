@@ -4,8 +4,8 @@
 exec ros -Q -- $0 "$@"
 |#
 
-;;(push #p"/app/" asdf:*central-registry*)
-(ql:quickload :alexandria)
+(push #p"/app/" asdf:*central-registry*)
+;;(ql:quickload :alexandria)
 (ql:quickload :cl-aws-template)
 
 (defun main (&rest argv)
